@@ -1,9 +1,14 @@
 import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import MainPage from './pages/MainPage';
+import CommonLayOut from './layout/CommonLayOut';
 
 function App() {
   return (
     <>
-      <h1>자 드가자아</h1>
+      <Routes>
+        <Route path="/" element={<CommonLayOut />}></Route>
+      </Routes>
     </>
   );
 }

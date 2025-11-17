@@ -5,5 +5,9 @@ const API_BASE_URL =
 
 export const AuthContext = createContext();
 export function AuthProvider({ children }) {
-  return <AuthContext.Provider>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={{ API_BASE_URL }}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
